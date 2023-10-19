@@ -1,17 +1,11 @@
-const empleado = require('../components/empleado/interface')
-const pais = require('../components/pais/interface')
-const ciudad = require('../components/ciudad/interface')
-const cliente = require('../components/cliente/interface')
-const producto = require('../components/producto/interface')
-const factura = require('../components/factura/interface')
 
-const routes = function(server) {
-    server.use('/empleado', empleado)
-    server.use('/pais', pais)
-    server.use('/ciudad', ciudad)
-    server.use('/cliente', cliente)
-    server.use('/producto', producto)
-    server.use('/factura', factura)
+const usuario = require('../components/usuario/interface')
+const representantelegal = require('../components/representante-legal/interface')
+const empresa = require('../components/empresa/interface')
+
+const routes = function( server ){
+    server.use('/usuario',usuario)
+    server.use('/representante-legal',representantelegal)
+    server.use('/empresa',empresa)
 }
-
 module.exports = routes
